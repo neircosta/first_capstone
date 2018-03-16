@@ -70,7 +70,7 @@ def residual_plot(ax, x, y, y_hat, n_bins=50):
     ax.set_ylabel("Residuals ($y - \hat y$)")
 
 def rss(y, y_hat):
-    return np.sum((y - y_hat)**2)
+    return np.mean((y  - y_hat)**2)
 
 def rsq(y, y_hat):
     ss_tot = rss(y, np.mean(y))
